@@ -4,8 +4,25 @@ const questions = [
         title: "The Array elements, which are the value stored in an array, are enclosed within ___."
         choices: ["curly brackets", "parenthesis", "square brackets", "quotes"],
         answer: "square brackets"
+    },
+    {
+        title: "In order to round the number 4.13 to the nearest whole number,the method used would be ____."
+        choices: ["math.max()", "math.ceil()", "math.floor()", "math.sqrt()"],
+        answer: "math.floor"
+    },
+    {
+        title: "To make a comment in javascript without interfering with the program running, use___."
+        choices: ["//", "===", "*--->", "||"],
+        answer: "//"
+    },
+    {
+        title: "What statemnt is used to find the target element, selectors, attributes in a document object in the browser"
+        choices: ["document.querySelector()", "document.addEventListner()", "document.createElement()", "document.textcontent()"],
+        answer: "document.querySelector"
     }
-]
+
+
+];
 
 
 
