@@ -9,18 +9,18 @@
 </head>
 <body>
         <header>
-            <div class="score">
+            <div class="score" id="score">
                 View Highscores
             </div>
 
             <div class="timer">
-                Time
+                Time: <span id="time">0</span>
             </div>
         
         </header>
 
-        <div>
-            <div>
+        <div class="container">
+            <div class="start" id="start">
                 <h1>Coding Terminology Quiz Challenge</h1>
                 <p>It is time to to see how much you know about Coding! Please answer the the 
                     coding-related questions. Be aware that any inccorrect answers will penalize and deduct
@@ -28,16 +28,16 @@
                     <button id="start-btn">Start the Quiz</button>
             </div>
 
-            <div class="question">
+            <div class="question" id="question">
                 <div class="question-box">
-                    <div class="title">
+                    <div class="title" id="question-title">
                     </div>
-                    <div class="question-btn">
+                    <div class="question-btn" id="answer-btn">
                     </div>
                 </div>
 
             
-                <div class="end">
+                <div class="end" id="end">
                     <div class="title">
                         The quiz is all finished!
                     </div>
@@ -46,7 +46,7 @@
                         
                     </p>
                     <div class="input">
-                        Enter name: <input type="text" > <button>Submit</button>
+                        Enter name: <input type="text"  id="finalInput"> <button id="finalSubmit">Submit</button>
                     </div>
 
                 </div>
@@ -55,18 +55,18 @@
 
         </div>
 
-        <div class="history">
+        <div class="history" id="history">
             <div class="history-box">
                 <div class="scores">
                     <div class="title">
                         Highscores
                     </div>
-                    <div class="score-box">
+                    <div class="score-box" id="score-box">
                     </div>
                 </div>
                 <div class="buttons">
-                    <button>Go Back</button> 
-                    <button>Clear Player History</button>                   
+                    <button id="back">Go Back</button> 
+                    <button id="clearHistory">Clear Player History</button>                   
                 </div>
             </div>
         </div>
