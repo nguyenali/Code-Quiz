@@ -125,15 +125,15 @@ $(function () {
 
         end.removeClass('active');
         start.removeClass('fade');
-        cur
+        currentQuestion = 0;
+        time.text(0);
+        timeCount = questions.length * 15;
 
 
 
+    });
 
-
-
-
-    }
+    //end finish
     
     
     
