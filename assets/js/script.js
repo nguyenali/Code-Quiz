@@ -101,8 +101,13 @@ $(function () {
                 timeCount = 0;
                 return
             }
-        }
-    }
+            timeCount--;
+            time.text(timeCount);
+        }, 1000)
+    });
+
+    //end start quiz
+    
 
 
 
