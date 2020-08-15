@@ -47,19 +47,19 @@ $(function () {
         nextQuestion(currentQuestion);
         }
 
-    function nextQuestion (number) {
-        if (nummbe <= questions.length-1){
+        function nextQuestion (number) {
+        if (number <= questions.length-1){
             $('#question-title').text(questions[number].title);
             $('#answer-btn').empty();
 
             questions[number].choices.forEach((item, index) => {
-                let answer = $ (' <button class-"answer>${index+1'}. ${item}</button>');
+                let answer = $ (' <button class-"answer>${index + 1'}. ${item}</button>');
                 $('#answer-btn').append(answer);
             }
         });
 
 
-    }   else {
+      else {
         question.removeClass('active');
         end.addClass('active');
         clearInterval(interval);
