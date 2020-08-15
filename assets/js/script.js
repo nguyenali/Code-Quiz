@@ -47,6 +47,35 @@ $(function () {
         nextQuestion(currentQuestion);
         }
 
+    function nextQuestion (number) {
+        if (nummbe <= questions.length-1){
+            $('#question-title').text(questions[number].title);
+            $('#answer-btn').empty();
+
+            questions[number].choices.forEach((item, index) => {
+                let answer = $ (' <button class-"answer>${index+1'}. ${item}</button>');
+                $('#answer-btn').append(answer);
+            }
+        });
+
+
+    }   else {
+        question.removeClass('active');
+        end.addClass('active');
+        clearInterval(interval);
+        if (timeCount<0) {
+            time.text(0) 
+            final.text(0);
+        } else {
+            final.text(timeCount);
+            time.text(timeCount)
+        }
+        }
+
+
+
+
+    }
 
 
 
