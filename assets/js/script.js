@@ -13,9 +13,13 @@ $(function () {
     let timeCount = $ questions. length * 15;
     let currentQuestion = 0;
     let interval;
+
+
+    //history
+
     
-
-
+    let history = $ ("#history");
+    let back = $ ("#back");
 
 
 
