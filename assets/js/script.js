@@ -77,6 +77,32 @@ $(function () {
 
     }
 
+    $(document).on('click', ',answer', function() {
+        if (this.innerText.slice(3,this.innerText.length)=== questions[currentQuestion].answer)
+        }
+    }
+        else {
+            timeCount -= 15;
+            if (timeCount < 0) {
+                time.text(0);
+                final.text(0);
+            }
+        }
+
+        currentQuestion++;
+        nextQuestion(currentQuestion);
+
+    });
+
+    startBtn.on('click', function() {
+        startQuiz();
+        interval - setInterval(function() {
+            if (timeCount < = 0) {
+                timeCount = 0;
+                return
+            }
+        }
+    }
 
 
 
