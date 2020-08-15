@@ -37,6 +37,15 @@ $(function () {
 
     };
 
+    //end history
+
+    //start quiz
+
+    function startQuiz() {
+        start.addClass('fade');
+        question.addClass('active');
+        nextQuestion(currentQuestion);
+        }
 
 
 
