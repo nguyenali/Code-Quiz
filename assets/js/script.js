@@ -107,7 +107,37 @@ $(function () {
     });
 
     //end start quiz
+
+    //finish
+
+    finalSubmit.on ('click', function() {
+        if (timeCount <0) {
+            timeCount= 0
+        }
+
+        if (finalInput.val()) {
+            historyArray.push ({name: finalInput.val(), score: timeCount});
+            finalInput.val('');
+            localStorage.setItem('score', JSON.stringify(historyArray));
+            history.addClass('active');
+            getHistory();
+        }
+
+        end.removeClass('active');
+        start.removeClass('fade');
+        cur
+
+
+
+
+
+
+
+    }
     
+    
+    
+    )
 
 
 
