@@ -1,4 +1,18 @@
 
+const questions = [
+    {
+        title: "The Array elements, which are the value stored in an array, are enclosed within ___."
+        choices: ["curly brackets", "parenthesis", "square brackets", "quotes"],
+        answer: "square brackets"
+    }
+]
+
+
+
+
+
+
+
 $(function () {
 
     let score = $('#score');
