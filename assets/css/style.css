@@ -7,3 +7,35 @@ html {
 body {
     margin: 0;
 }
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size-adjust: 32px;
+    margin: 10px 0; 
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre{
+    font-family: monospace,monospace;
+    font-size: 16px;
+}
+
+a{
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
