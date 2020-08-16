@@ -50,49 +50,45 @@ var timer;
         next();
     }
     
-//stop the timer to end the game 
-function endGame() {
-    clearInterval(timer);
+    //stop the timer to end the game 
+    function endGame() {
+        clearInterval(timer);
 
-    var quizContent = `
-    <h2>Game over!</h2>
-    <h3>You got a ` + score +  ` /100!</h3>
-    <h3>That means you got ` + score / 20 +  ` questions correct!</h3>
-    <input type="text" id="name" placeholder="First name"> 
-    <button onclick="setScore()">Set score!</button>`;
+        var quizContent = `
+        <h2>Game over!</h2>
+        <h3>You got a ` + score +  ` /100!</h3>
+        <h3>That means you got ` + score / 20 +  ` questions correct!</h3>
+        <input type="text" id="name" placeholder="First name"> 
+        <button onclick="setScore()">Set score!</button>`;
 
-    document.getElementById("quizBody").innerHTML = quizContent;
-}
+        document.getElementById("quizBody").innerHTML = quizContent;
+    }
+
+    
+
+    //store the scores on local storage
+    function setScore() {
+        localStorage.setItem("highscore", score);
+        localStorage.setItem("highscoreName",  document.getElementById('name').value);
+        getScore();
+    }
+
+    function getScore() {
+        var quizContent = `
+        <h2>` + localStorage.getItem("highscoreName") + `'s highscore is:</h2>
+        <h1>` + localStorage.getItem("highscore") + `</h1><br> 
+        
+        <button onclick="clearScore()">Clear score!</button><button onclick="resetGame()">Play Again!</button>
+        
+        `;
+    
+        document.getElementById("quizBody").innerHTML = quizContent;
+    }
+    
 
 
 
 
-    $(document).on('click','.answer', function () {
-        if (this.innerText.slice(3,this.innerText.length) === questions[curentQuestion].answer){
-        } else {
-            errorSound();
-            timeCount -= 15;
-            if (timeCount < 0) {
-                time.text(0);
-                final.text(0);
-            }
-        }
-        curentQuestion++;
-        nextQuestion(curentQuestion);
-    });
-    startBtn.on('click', function () {
-        startQuiz();
-        interval = setInterval(function () {
-            if (timeCount <= 0) {
-                timeCount = 0;
-                return
-            }
-            timeCount--;
-            time.text(timeCount);
-        }, 1000)
-    });
-
-    //end start quiz
 
 
     //finish
