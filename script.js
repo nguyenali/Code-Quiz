@@ -1,29 +1,29 @@
 
 //arrray of the quiz questions, avaialble choices, and correct answers     
 var questions = [{
-    title: "Which of the following function of an array object adds one or more elements to the front of an array and returns the new length of the array?",
-    choices: ["unshift( )", "sort( )", "splice( )", "toString( )"],
-    answer: "unshift( )"
+    title: "What is name of the type of popup in the browser that will allow users to type a response?",
+    choices: ["alert", "prompt", "input", "confirm"],
+    answer: "prompt"
 },
 {
-    title: "Which built-in method adds one or more elements to the end of an array and returns the new length of the array?",
-    choices: ["last( )", "put( )", "push( )", "pop( )"],
-    answer: "push( )"
+    title: "Which of the following math statments would be used to round the value 3.14 down to 3?",
+    choices: ["math.random()", "math.floor()", "math.ceil()", "math.sqrt()"],
+    answer: "math.floor()"
 },
 {
-    title: " Which built-in method returns the characters in a string beginning at the specified location?",
-    choices: ["substr( )", "getSubstring( )", "slice( )", "None of the above."],
-    answer: "substr( )"
+    title: "What does the DOM stand for in Javascript",
+    choices: ["Data Object Minimizer", "Document Object Model", "Data Observation Mode", "Document Objective Modifier"],
+    answer: "Data Object Model"
 },
 {
-    title: "Which of the following function of an array object adds and/or removes elements from an array?",
-    choices: ["toSource( )", "sort( )", "unshift( )", "splice( )"],
-    answer: "splice( )"
+    title: "If/ else statments are enclosed within _____",
+    choices: ["curly brackets", "quotes", "parentheses", "square brackets"],
+    answer: "parentheses"
 },
 {
-    title: "Which of the following function of String object combines the text of two strings and returns a new string?",
-    choices: ["add( )", "concat( )", " merge( )", "append( )"],
-    answer: "concat( )"
+    title: "Arrays in Javascript can be used to store?",
+    choices: ["other arrays", "booleans", "number and strings", "all of the above"],
+    answer: "all of the above"
 }
 ]
 
@@ -114,7 +114,9 @@ var timer;
             JavaScript Quiz!
         </h1>
         <h3>
-            Click to play!   
+        Time to test your knowlege of everything Javascript related.
+        Be aware that incorrect answers will deduct ten second from
+        your time. Click to play!   
         </h3>
         <button onclick="start()">Start!</button>`;
 
@@ -123,7 +125,7 @@ var timer;
 
     //deduct 15seconds from the timer if user chooses an incorrect answer
     function incorrect() {
-        timeLeft -= 15; 
+        timeLeft -= 10; 
         next();
     }
 
