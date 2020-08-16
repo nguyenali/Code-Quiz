@@ -24,68 +24,32 @@ var questions = [
 
 ];
 
-
-$(function () {
-
-    let score = $('#score');
-    let end = $('#end');
-    let time = $('#time');
-    let start = $('#start');
-    let question = $('#question');
-    let startBtn = $('#start-btn');
-    let final = $('#final');
-    let finalSubmit = $('#finalSubmit');
-    let finalInput = $('#finalInput');
-    let timeCount = questions.length * 15;
-    let curentQuestion = 0;
-    let interval;
-
-
-    //history
-
-    let history = $('#history');
-    let back = $('#back');
-    let clearHistory = $('#clearHistory');
-    let historyArray = [];
-    localStorage.setItem('score', JSON.stringify([]));
-    getHistory = ()=>{
-        $('#score-box').empty();
-        if (localStorage.getItem('score')){
-            historyArray = JSON.parse(localStorage.getItem('score'));
-            historyArray.sort((a, b) => b.score - a.score);
-        }
-        historyArray.forEach((item, index) => {
-            let itemscore = $(`<div class="score-item">${index + 1}. ${item.name} <span class="s-score">${item.score}</span></div>`);
-            $('#score-box').append(itemscore);
-        })
-    };
-
-    getHistory();
-
-    score.on('click', function () {
-        history.addClass('active');
-    });
-
-    back.on('click', function () {
-        history.removeClass('active');
-    });
-
-    clearHistory.on('click', function () {
-        localStorage.setItem('score', JSON.stringify([]));
-        getHistory();
-    });
-
-
-    //end history
-
+//setting the numerical variables for the functions.. scores and timers.. 
+var score = 0;
+var currentQuestion = -1;
+var timeLeft = 0;
+var timer;
 
     //start quiz
 
-    function startQuiz() {
-        start.addClass('fade');
-        question.addClass('active');
-        nextQuestion(curentQuestion);
+    function start() {
+
+        timeLeft = 75;
+        document.getElementById("timeLeft").innerHTML = timeLeft;
+    
+        timer = setInterval(function() {
+            timeLeft--;
+            document.getElementById("timeLeft").innerHTML = timeLeft;
+            //proceed to end the game function when timer is below 0 at any time
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                endGame(); 
+            }
+        }, 1000);
+    
+        next();
     }
+    
 
     function nextQuestion(number) {
         if (number <= questions.length-1){
