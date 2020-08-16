@@ -4,11 +4,11 @@
 
 
 ## Purpose
-A website that allows visiters to test and refresh their knowledge on Javascript code terminology.
+A website that allows visiters to test and refresh their knowledge on Javascript.
 ## Built With
 * JS
-* HTMl
 * CSS
+* HTML
 
 ## Website
 https://nguyenali.github.io/Password-Generator/
