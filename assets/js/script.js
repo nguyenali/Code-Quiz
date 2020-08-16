@@ -50,29 +50,22 @@ var timer;
         next();
     }
     
+//stop the timer to end the game 
+function endGame() {
+    clearInterval(timer);
 
-    function nextQuestion(number) {
-        if (number <= questions.length-1){
-            $('#question-title').text(questions[number].title);
-            $('#answer-btn').empty();
+    var quizContent = `
+    <h2>Game over!</h2>
+    <h3>You got a ` + score +  ` /100!</h3>
+    <h3>That means you got ` + score / 20 +  ` questions correct!</h3>
+    <input type="text" id="name" placeholder="First name"> 
+    <button onclick="setScore()">Set score!</button>`;
 
-            questions[number].choices.forEach((item,index) => {
-                let answer = $(`<button class="answer">${index + 1}. ${item}</button>`);
-                $('#answer-btn').append(answer);
-            });
-        } else {
-            question.removeClass('active');
-            end.addClass('active');
-            clearInterval(interval);
-            if (timeCount < 0) {
-                time.text(0);
-                final.text(0);
-            } else {
-                final.text(timeCount);
-                time.text(timeCount)
-            }
-        }
-    }
+    document.getElementById("quizBody").innerHTML = quizContent;
+}
+
+
+
 
     $(document).on('click','.answer', function () {
         if (this.innerText.slice(3,this.innerText.length) === questions[curentQuestion].answer){
