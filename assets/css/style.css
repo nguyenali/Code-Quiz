@@ -322,3 +322,57 @@ header .score {
     background: #7b3eb9;
 }
 
+.end {
+    display: none;
+    max-width: 400px;
+    margin:  0 auto;
+}
+
+.end.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.end.title {
+    font-family: montserraBold, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.end .input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.end .input input {
+    width: 140px;
+    margin-left: 10px;
+}
+
+
+.end .input button {
+    border-radius: 5px;
+    border: 0;
+    padding: 5px 15px;
+    color: #fff;
+    background: rebeccapurple;
+    cursor: pointer;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: 10px;
+}
+
+.end .input button:hover {
+    background: #7b3eb9;
+}
