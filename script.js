@@ -1,5 +1,5 @@
 
-//arrray of the quiz questions, avaialble choices, and correct answers     
+//Array of the quiz questions, multiple choices , and correct answers     
 var questions = [{
     title: "What is name of the type of popup in the browser that will allow users to type a response?",
     choices: ["alert", "prompt", "input", "confirm"],
@@ -28,13 +28,13 @@ var questions = [{
 ]
 
 
-//setting the numerical variables for the functions.. scores and timers.. 
+//Numerical variables of functions for quiz to run 
 var score = 0;
 var currentQuestion = -1;
 var timeLeft = 0;
 var timer;
 
-    //start quiz
+    //Function to start quiz
 
     function start() {
 
@@ -54,7 +54,7 @@ var timer;
         next();
     }
     
-    //stop the timer to end the game 
+    //Function to stop timer which will end the game 
     function endGame() {
         clearInterval(timer);
 
@@ -70,7 +70,7 @@ var timer;
 
     
 
-    //store the scores on local storage
+    //Function to store scores on local storage
     function setScore() {
         localStorage.setItem("highscore", score);
         localStorage.setItem("highscoreName",  document.getElementById('name').value);
@@ -91,7 +91,7 @@ var timer;
     
 
 
-    //clears the score name and value in the local storage if the user selects 'clear score'
+    //Function to clear highscore name and value in the local storage 
     function clearScore() {
         localStorage.setItem("highscore", "");
         localStorage.setItem("highscoreName",  "");
@@ -99,7 +99,7 @@ var timer;
         resetGame();
     }
 
-    //reset the game 
+    //Function to reset the game 
     function resetGame() {
         clearInterval(timer);
         score = 0;
@@ -123,19 +123,19 @@ var timer;
         document.getElementById("quizBody").innerHTML = quizContent;
     }
 
-    //deduct 15seconds from the timer if user chooses an incorrect answer
+    //Function to deduct 10 seconds from the timer if user chooses an incorrect answer
     function incorrect() {
         timeLeft -= 10; 
         next();
     }
 
-    //increases the score by 20points if the user chooses the correct answer
+    //Function to increase the score by 20 points if the user chooses the correct answer
     function correct() {
         score += 20;
         next();
     }
 
-    //loops through the questions 
+    //Function to loop and precede through the questions 
     function next() {
         currentQuestion++;
 
