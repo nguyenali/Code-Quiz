@@ -494,3 +494,14 @@ button {
     font-family: 'Roboto Slab', arial;
     margin: 4px;
 }
+
+button:hover {
+    transition-duration: 0.4s;
+    background-color: #ff80a4;
+}
+
+#quiz {
+    text-align: center;
+}
+
+        
