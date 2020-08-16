@@ -117,6 +117,17 @@ var timer;
         document.getElementById("quizBody").innerHTML = quizContent;
     }
 
+    //deduct 15seconds from the timer if user chooses an incorrect answer
+    function incorrect() {
+        timeLeft -= 15; 
+        next();
+    }
+
+    //increases the score by 20points if the user chooses the correct answer
+    function correct() {
+        score += 20;
+        next();
+    }
 
 
 
