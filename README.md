@@ -7,8 +7,8 @@
 A website that allows visiters to test and refresh their knowledge on Javascript.
 ## Built With
 * JS
-* CSS
 * HTML
+* CSS
 
 ## Website
 https://nguyenali.github.io/Password-Generator/
