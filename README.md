@@ -12,8 +12,7 @@ A website that allows visiters to test and refresh their knowledge on Javascript
 * CSS
 
 ## Website
-https://nguyenali.github.io/Password-Generator/
-
+https://nguyenali.github.io/Code-Quiz/
 
 ## Contribution
 Made with ❤️ Ali Nguyen
