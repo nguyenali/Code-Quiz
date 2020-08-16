@@ -1,6 +1,7 @@
 # CodeQuiz
 
-![Screen Shot](https://user-images.githubusercontent.com/67357469/89740207-953dc380-da3b-11ea-81a2-4769ef018666.jpg)
+![Screen Shot](https://user-images.githubusercontent.com/67357469/90328354-9cd7fd80-df50-11ea-8324-343eef4dce9e.jpg)
+
 
 
 ## Purpose
