@@ -8,70 +8,19 @@
     link
 </head>
 <body>
-        <header>
-            <div class="score" id="score">
-                View Highscores
-            </div>
+    <div id="nav">
+        <!-- view scores link on the top left of nav bar-->
+        <div class="left">
+            <a onclick="getScore()" href="#"><h4 >View Highscore</h4></a>
+        </div>
+        <!-- countdown timer on the top right of nav bar-->
+        <div class="right">
+            <h4>Time: <span id="timeLeft">0</span></h4>
+        </div>
+    </div>
 
-            <div class="timer">
-                Time: <span id="time">0</span>
-            </div>
         
-        </header>
 
-        <div class="container">
-            <div class="start" id="start">
-                <h1> Javascript Coding Quiz</h1>
-                <p>It is time to to see how much you know about Javascript! Please answer the the 
-                    Javascript-related questions. Be aware that any inccorrect answers will penalize and deduct
-                    ten seconds from your score time </p>
-                    <button id="start-btn">Start the Quiz</button>
-            </div>
-
-            <div class="question" id="question">
-                <div class="question-box">
-                    <div class="title" id="question-title">
-                    </div>
-                    <div class="question-btn" id="answer-btn">
-                    </div>
-                </div>
-
-            
-                <div class="end" id="end">
-                    <div class="title">
-                        The quiz is all finished!
-                    </div>
-                    <p>
-                        Final Score <span id="final"></span>
-                        
-                    </p>
-                    <div class="input">
-                        Enter name: <input type="text"  id="finalInput"> <button id="finalSubmit">Submit</button>
-                    </div>
-
-                </div>
-
-             </div>
-
-        </div>
-
-        <div class="history" id="history">
-            <div class="history-box">
-                <div class="scores">
-                    <div class="title">
-                        Highscores
-                    </div>
-                    <div class="score-box" id="score-box">
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button id="back">Go Back</button> 
-                    <button id="clearHistory">Clear Player History</button>                   
-                </div>
-            </div>
-        </div>
-
-    <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
