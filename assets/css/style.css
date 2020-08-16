@@ -14,7 +14,7 @@
     background-color: white;
     display: inline-block;
     width: 98vw;
-    border: 3px solid #05ff82;
+    border: 3px solid #00ff80;
     border-radius: 5px;
     margin: 6px;
 }
@@ -23,8 +23,8 @@
 
 body {
     font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;;
-    background-color: #fff5f8;
-    
+    background-color: #adffd6;
+    #adffd6
 }
 
 #quizBody {
@@ -43,7 +43,7 @@ a {
 
 button {
     border: none;
-    background-color: #e64e79;
+    background-color: #80ffa6;
     color: white;
     border-radius: 5px;
     padding: 10px 16px 10px 16px;
@@ -54,7 +54,7 @@ button {
 
 button:hover {
     transition-duration: 0.4s;
-    background-color: #ff80a4;
+    background-color: #80ffa6;
 }
 
 #quiz {
