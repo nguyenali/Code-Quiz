@@ -1,28 +1,32 @@
 
-var questions = [
-    {
-        title: "The Array elements, which are the value stored in an array, are enclosed within ___."
-        choices: ["curly brackets", "parenthesis", "square brackets", "quotes"],
-        answer: "square brackets"
-    },
-    {
-        title: "In order to round the number 4.13 to the nearest whole number,the method used would be ____."
-        choices: ["math.max()", "math.ceil()", "math.floor()", "math.sqrt()"],
-        answer: "math.floor"
-    },
-    {
-        title: "To make a comment in javascript without interfering with the program running, use___."
-        choices: ["//", "===", "*--->", "||"],
-        answer: "//"
-    },
-    {
-        title: "What statemnt is used to find the target element, selectors, attributes in a document object in the browser"
-        choices: ["document.querySelector()", "document.addEventListner()", "document.createElement()", "document.textcontent()"],
-        answer: "document.querySelector"
-    }
+//arrray of the quiz questions, avaialble choices, and correct answers     
+var questions = [{
+    title: "Which of the following function of an array object adds one or more elements to the front of an array and returns the new length of the array?",
+    choices: ["unshift( )", "sort( )", "splice( )", "toString( )"],
+    answer: "unshift( )"
+},
+{
+    title: "Which built-in method adds one or more elements to the end of an array and returns the new length of the array?",
+    choices: ["last( )", "put( )", "push( )", "pop( )"],
+    answer: "push( )"
+},
+{
+    title: " Which built-in method returns the characters in a string beginning at the specified location?",
+    choices: ["substr( )", "getSubstring( )", "slice( )", "None of the above."],
+    answer: "substr( )"
+},
+{
+    title: "Which of the following function of an array object adds and/or removes elements from an array?",
+    choices: ["toSource( )", "sort( )", "unshift( )", "splice( )"],
+    answer: "splice( )"
+},
+{
+    title: "Which of the following function of String object combines the text of two strings and returns a new string?",
+    choices: ["add( )", "concat( )", " merge( )", "append( )"],
+    answer: "concat( )"
+}
+]
 
-
-];
 
 //setting the numerical variables for the functions.. scores and timers.. 
 var score = 0;
@@ -151,34 +155,5 @@ var timer;
             quizContent += buttonCode
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    //finish
-
-    finalSubmit.on('click', function () {
-        if (timeCount < 0) {
-            timeCount = 0
-        }
-        if (finalInput.val()){
-            historyArray.push({name: finalInput.val(), score: timeCount});
-            finalInput.val('');
-            localStorage.setItem('score', JSON.stringify(historyArray));
-            history.addClass('active');
-            getHistory();
-        }
-        end.removeClass('active');
-        start.removeClass('fade');
-        curentQuestion = 0;
-        time.text(0);
-        timeCount = questions.length * 15;
-    });
+        document.getElementById("quizBody").innerHTML = quizContent;
+    }
