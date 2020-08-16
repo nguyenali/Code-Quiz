@@ -376,3 +376,45 @@ header .score {
 .end .input button:hover {
     background: #7b3eb9;
 }
+
+.history {
+    display: none;
+}
+
+.history.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 634 px;
+    background: #fff;
+    z-index: 5;
+}
+
+.history-box {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.history-box .scores .title {
+    font-size: 22px;
+    font-weight: bold;
+    font font-family: MontserraBold, sans-serif;
+}
+
+.history-box .scores .score-box {
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
